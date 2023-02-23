@@ -1,1 +1,16 @@
-<p>products works!</p>
+<div class="container-products">
+    <div class="product" *ngFor="let product of products" (click)="addProduct(product.id)" >
+        <img src={{product.image}}>
+        <div class="info-button-product">
+            <div class="info-product">
+                <p>{{product.title}}</p>
+                <p>${{product.price}}</p>
+            </div>
+                      
+        </div>
+        
+    </div>
+</div>
+<div  ngDefaultControl  [(ngModel)]="addProducts">
+   <app-pedidos [addPedidos]="addProducts"></app-pedidos>
+</div>

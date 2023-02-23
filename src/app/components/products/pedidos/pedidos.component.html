@@ -1,0 +1,8 @@
+<p>pedidos works!</p>
+<button (click)="mostrarPedido()">Mostrar Pedidos</button>
+<div>
+    <div *ngFor="let pedido of addPedidos" >
+        <p>{{pedido.title}}</p>
+
+    </div>
+</div>
